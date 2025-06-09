@@ -5,7 +5,7 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Copy requirements.txt into the container at /app
-COPY requirements.txt
+COPY requirements.txt requirements.txt
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
