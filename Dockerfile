@@ -7,11 +7,11 @@ WORKDIR /app
 # Copy requirements.txt into the container at /app
 COPY requirements.txt requirements.txt
 
+# Copy the current directory contents into the container at /app
+COPY . /app
+
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir streamlit requests pandas
-
-# Copy the current directory contents into the container at /app
-COPY app/ .
 
 # Make port 8501 available to the world outside this container
 EXPOSE 8501
